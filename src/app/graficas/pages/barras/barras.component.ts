@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
 
@@ -7,7 +7,7 @@ import { Label } from 'ng2-charts';
   templateUrl: './barras.component.html',
   styleUrls: ['./barras.component.css']
 })
-export class BarrasComponent implements OnInit {
+export class BarrasComponent {
 
   public barChartOptions: ChartOptions = {
     responsive: true,
@@ -21,10 +21,6 @@ export class BarrasComponent implements OnInit {
     { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B'},
     { data: [ 8, 18, 20, 49, 96, 17, 100 ], label: 'Series C'}
   ];
-
-  ngOnInit(): void {
-    //
-  }
 
   public randomize(): void {
     // Only Change 3 values
